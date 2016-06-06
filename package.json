@@ -1,0 +1,15 @@
+{
+  "name": "appointments",
+  "version": "1.0.0",
+  "description": "test slots",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.4",
+    "mongoose": "^4.1.3",
+    "node-restful": "^0.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server"
+  }
+}

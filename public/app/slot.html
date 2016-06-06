@@ -1,0 +1,52 @@
+
+    <div class="row">
+        <div  class="col-md-6" ng-repeat="d in $ctrl.dates">
+                <button style="border: 1px solid white" class="col-md-12 btn btn-primary"
+                        ng-repeat="i in d.v"
+                        ng-click="$ctrl.showAdvanced(i)"
+                        ng-disabled="!i.active">
+                    {{i.date | date:'h:mma'}}
+                </button>
+        </div>
+        <div class="col-md-6">
+            <h2>List of exist slots</h2>
+            <hr>
+            <p layout="column" ng-repeat="a in $ctrl.appointments">
+                {{a.name}} ({{a.phone}}) => {{a.date | date:' h:mma'}}
+            </p>
+        </div>
+    </div>
+
+
+    <!--
+    <section layout="row">
+<md-content layout="row" flex="66" layout-wrap>
+    <md-card ng-repeat="d in $ctrl.dates"  class="md-whiteframe-z2" flex flex-sm="40" flex-xs="100">
+        <md-card-content>
+            <p layout="column">
+                <md-button class="md-primary md-raised"
+                ng-repeat="i in d.v"
+                ng-click="$ctrl.showAdvanced(i)"
+                ng-disabled="!i.active"
+                flex>
+                    {{i.date | date:'h:mma'}}
+                </md-button>
+            </p>
+        </md-card-content>
+        <md-card-footer></md-card-footer>
+    </md-card>
+
+</md-content>
+<md-card class="md-whiteframe-z2" flex="33">
+    <md-card-content>
+        <h2>List of exist slots</h2>
+        <p layout="column" ng-repeat="a in $ctrl.appointments">
+            {{a.name}} ({{a.phone}}) => {{a.date | date:' h:mma'}}
+        </p>
+    </md-card-content>
+    <md-card-footer></md-card-footer>
+</md-card>
+</section>
+
+    -->
+
